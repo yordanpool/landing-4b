@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+    font-weight: 700;
+}
+
+section {
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.nav-link {
+    font-weight: 700;
+}
+
+.home__img {
+    background-image: url(../img/cover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-outline-light:hover {
+    color: #000000;
+}
+
+.home::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.8);
+    z-index: -1;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
+}
+
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+
+.service:hover .iconbox {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.service:hover h3,
+.service:hover p {
+    color: var(--white);
+    
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.features__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-img {
+    background-image: url(../img/cover2.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.portfolio__project {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio__img {
+    transition: all 0.4s ease;
+}
+
+.portfolio__descr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 20, 51, 0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: -1;
+}
+
+.bi-bookmark-check {
+    padding: 10px;
+
+}
+
+.portfolio__descr:hover {
+    background-color: rgba(21, 20, 51, 0.8);
+    opacity: 2;
+}
+
+.portfolio__project:hover img {
+    transform: scale(1.1);
+}
+
+.icon__hover:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.icon__hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+li a {
+    color: #fff;
+}
